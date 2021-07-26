@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<parameter name="URL" value="https://google.com"/>
+<parameter name="Module" value="Furlough"/>
+
+  <test thread-count="5" name="LoanModule">
+    <classes>
+      <class name="testNG_Basics.SportsLoan"/>
+      <class name="testNG_Basics.HomeLoans"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+

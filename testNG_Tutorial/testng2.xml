@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Basics">
+    <classes>
+      <class name="testNG_Basics.ECommerce"/>
+      <class name="testNG_Basics.Shopping">
+      		<methods>
+      			<include name="shopCartTest1"></include>   <!--Include allows runs only specific method/test and ignore other tests in that class  -->
+      		</methods>
+      </class>
+
+    </classes>
+  </test> 
+  
+  <test name="Health">
+  <classes>
+        <class name = "testNG_Basics.Yoga">
+        	<methods>
+        		<exclude name="yoga.*"></exclude>   <!--Exclude all test names which starts with yoga...  -->
+        	</methods>
+        	
+        </class>
+       <class name = "testNG_Basics.Meditation">
+       		<methods>
+       		<exclude name="meditateTest2"/>  <!--Exclude one test case/method  -->
+       		</methods>
+       </class>
+  </classes>
+  </test>
+</suite> <!-- Suite -->
